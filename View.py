@@ -9,7 +9,7 @@ import sys
 class View(QMainWindow) :
 
 	def __init__(self):
-		
+		#Patron
 		QMainWindow.__init__(self)	
 		self.setWindowOpacity(0.9)
 		self.setWindowIcon(QIcon("Pictures/telephone.png"))	
