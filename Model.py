@@ -10,7 +10,7 @@ from View import *
 class Model(View):
   	def __init__(self):
   		self.createDatabase()
-  		view.
+  		self.affichage()
 
   def createDatabase(self):
     #création et remplissage de la database
@@ -56,4 +56,4 @@ class Model(View):
     
   def affichage(self):
     for row in self.person:
-      View
+      View.listContact.addItem(self.person[0])
