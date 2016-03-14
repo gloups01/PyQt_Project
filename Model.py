@@ -51,5 +51,9 @@ class Model(View):
 
     cursor.execute("""
     SELECT name, lastName FROM contacts""")
-    person = cursor.fetchone()
+    self.person = cursor.fetchone()
     db.commit()
+    
+  def affichage(self):
+    for row in self.person:
+      View
