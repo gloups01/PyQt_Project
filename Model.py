@@ -8,8 +8,8 @@ import sys
 from View import *
 
 class Model(View):
-  	def __init__(self):
-  		self.createDatabase()
+    def __init__(self):
+  	  self.createDatabase()
   		self.affichage()
 
   def createDatabase(self):
