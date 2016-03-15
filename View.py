@@ -38,6 +38,8 @@ class View(QMainWindow) :
 		actionSearch = toolBar.addAction("Rechercher")
 		actionSearch.setIcon(QIcon("Pictures/person1.png"))
 		
+		#Création séparateur
+		toolBar.addSeparator()
 		
 		#Création icon add contact
 		actionAdd = toolBar.addAction("Ajouter")
