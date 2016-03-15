@@ -10,14 +10,16 @@ from View import *
 class Model :
 	def __init__(self,args) :
 		self.args = args
+		self.db = sqlite3.connect('DataBase.db')
+		
 		self.createDatabase()
 		self.affichage(args)
+		
 
 	def createDatabase(self):
 		#création et remplissage de la database
+		cursor = self.db.cursor()
 
-		db = sqlite3.connect('DataBase.db')
-		cursor = db.cursor()
 		 
 		cursor.execute("""
 		DROP TABLE IF EXISTS contacts
@@ -53,9 +55,15 @@ class Model :
 		cursor.execute("""
 		SELECT name, lastName FROM contacts""")
 		self.person = cursor.fetchall()
-		db.commit()
+		self.db.commit()
     
 	def affichage(self,args):
 		for row in self.person:
 			self.args.listContact.addItem(row[0])
+			
+	def supprimer(self,args):
+		cursor = self.db.cursor()
+		cursor.execute("""
+		DELETE FROM contacts WHERE name = self.args.listContact.selectedItems()""")
+		
 
