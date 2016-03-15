@@ -72,7 +72,7 @@ class View(QMainWindow) :
 		containDock.setLayout(dockLayout)
 		
 		#Ajouter la list au dockwidget
-		listContact = QListWidget(displayWidget)
+		listContact = QListWidget()
 		listContact.addItem("Axel Camara")
 		listContact.addItem("Marine Bandeira")
 		listContact.addItem("Cyril Monti")
@@ -90,7 +90,7 @@ class View(QMainWindow) :
 		#model = QStringListModel(listContact)
 		#listView = QListView()
 		#listView.setModel(model)
-		#displayWidget.setWidget(listView)
+		displayWidget.setWidget(listContact)
 		
 		
 	def connectWidgets(self) :
