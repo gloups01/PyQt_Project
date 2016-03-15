@@ -4,12 +4,12 @@
 
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
+
 import sys
 
 class View(QMainWindow) :
 
-	def __init__(self):
-		
+	def __init__(self, args):
 		QMainWindow.__init__(self)	
 		self.setWindowOpacity(0.9)
 		self.setWindowIcon(QIcon("Pictures/telephone.png"))	
@@ -39,7 +39,7 @@ class View(QMainWindow) :
 		actionSearch.setIcon(QIcon("Pictures/person1.png"))
 		
 		#Création séparateur
-		toolBar.addSeparator()
+		self.toolBar.addSeparator()
 		
 		#Création icon add contact
 		actionAdd = toolBar.addAction("Ajouter")
@@ -48,6 +48,7 @@ class View(QMainWindow) :
 		#Création icon delete contact
 		actionDelete = toolBar.addAction("Supprimer")	
 		actionDelete.setIcon(QIcon("Pictures/contacts.png"))
+		
 		
 		#Création widget central
 		centralWidget = QWidget(self)
@@ -80,6 +81,7 @@ class View(QMainWindow) :
 		
 	def connectWidgets(self) :
 		pass
+	
 		
 		#Afficher une liste :
 		#QStringList numbers;
