@@ -44,7 +44,7 @@ class View(QMainWindow) :
 		actionAdd.setIcon(QIcon("Pictures/sign.png"))
 		
 		#Création icon delete contact
-		actionDelete = toolBar.addAction("Supprimer")
+		actionDelete = toolBar.addAction("Supprimer")	
 		actionDelete.setIcon(QIcon("Pictures/contacts.png"))
 		
 		#Création widget central
@@ -72,25 +72,8 @@ class View(QMainWindow) :
 		containDock.setLayout(dockLayout)
 		
 		#Ajouter la list au dockwidget
-		listContact = QListWidget()
-		listContact.addItem("Axel Camara")
-		listContact.addItem("Marine Bandeira")
-		listContact.addItem("Cyril Monti")
-		listContact.addItem("Kevin Engel")
-		listContact.addItem("Samuel Camara")
-		listContact.addItem("Tommy Guillot")
-		listContact.addItem("Léo Cochin")		
-		listContact.addItem("Léo Cochin")
-		listContact.addItem("Léo Cochin")
-		listContact.addItem("Léo Cochin")
-		listContact.addItem("Léo Cochin")
-		listContact.addItem("Léo Cochin")
-		listContact.addItem("Léo Cochin")
-		listContact.addItem("Léo Cochin")
-		#model = QStringListModel(listContact)
-		#listView = QListView()
-		#listView.setModel(model)
-		displayWidget.setWidget(listContact)
+		self.listContact = QListWidget()
+		displayWidget.setWidget(self.listContact)
 		
 		
 	def connectWidgets(self) :

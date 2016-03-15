@@ -5,6 +5,7 @@
 from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 from View import *
+from Model import *
 import sys
 
 def main(args) :
@@ -12,6 +13,7 @@ def main(args) :
 	app = QApplication(args)
 	
 	view = View()
+	model = Model(view)
 	
 	view.show()
 	
