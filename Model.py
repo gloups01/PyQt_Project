@@ -67,3 +67,5 @@ class Model :
 		DELETE FROM contacts WHERE name = self.args.listContact.selectedItems()""")
 		
 
+		
+
